@@ -2,4 +2,5 @@
 // 我们调用的ajax的参数全部以options参数的形式传入这个回调函数
 $.ajaxPrefilter(function (options) {
     options.url = "http://192.168.0.138:8024" + options.url; 
+    
 });

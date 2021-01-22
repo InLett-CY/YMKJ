@@ -18,47 +18,68 @@
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header">
             <div class="layui-logo"></div>
-            <!-- 头部区域（可配合layui已有的水平导航） -->
-            <ul class="layui-nav layui-layout-left">
-                <li class="layui-nav-item"><a href="">文章管理</a></li>
-                <li class="layui-nav-item"><a href="">用户管理</a></li>
-            </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">
+                    <a href="javascript:;" class="userinfor">
                         <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                        <span id="uname">姓名</span>
+                        <span class="text-avatar">张</span>
+                        个人中心
                     </a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">安全设置</a></dd>
+                    <dl class="layui-nav-child top-nav-dl">
+                        <dd><a href="/page/user/userinfor.html" target="fm">
+                                <i class="layui-icon layui-icon-form"></i>
+                                基本资料</a></dd>
+                        <dd><a href="">
+                                <i class="layui-icon layui-icon-picture-fine"></i>
+                                更换头像</a></dd>
+                        <dd><a href="">
+                                <i class="layui-icon layui-icon-survey"></i>
+                                重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="javascript:;" id="exit_link">退出系统</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="exit_link"><i class="layui-icon layui-icon-logout"></i> 退出系统</a>
+                </li>
             </ul>
         </div>
 
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
+                <div class="userinfor">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"><span class="text-avatar">张</span><span id="welcome">欢迎 张三</span>
+                </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all">
-                    <li class="layui-nav-item">   
-                        <a href="/" class="layui-icon layui-icon-home">首页</a>
+
+                    <li class="layui-nav-item layui-this">
+                        <a href="/page/dashboard.html" target="fm" class=""><i
+                                class="layui-icon layui-icon-home "></i>首页</a>
                     </li>
                     <li class="layui-nav-item">
-                        <a href="javascript:;" class="layui-icon layui-icon-list">文章管理</a>
+                        <a href="javascript:;">
+                            <i class="layui-icon layui-icon-list"></i> 文章管理</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-search">查看文章</a></dd>
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-set-sm">管理文章</a></dd>
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-release">发布文章</a></dd>
+                            <dd><a href="javascript:;">
+                                    <i class="layui-icon layui-icon-search"></i> 查看文章</a></dd>
+                            <dd><a href="javascript:;">
+                                    <i class="layui-icon layui-icon-set-sm"></i> 管理文章</a></dd>
+                            <dd><a href="javascript:;">
+                                    <i class="layui-icon layui-icon-release"></i> 发布文章</a></dd>
                         </dl>
                     </li>
                     <li class="layui-nav-item">
-                        <a href="javascript:;"  class="layui-icon layui-icon-friends">个人中心</a>
+                        <a href="javascript:;">
+                            <i class="layui-icon layui-icon-friends"></i> 个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-form">基本资料</a></dd>
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-picture-fine">更换头像</a></dd>
-                            <dd><a href="javascript:;" class="layui-icon layui-icon-survey">修改密码</a></dd>
+                            <dd><a href="/page/user/userinfor.html" target="fm">
+                                    <i class="layui-icon layui-icon-form"></i>
+                                    基本资料</a></dd>
+                            <dd><a href="javascript:;">
+                                    <i class="layui-icon layui-icon-picture-fine"></i>
+                                    更换头像</a></dd>
+                            <dd><a href="javascript:;">
+                                    <i class="layui-icon layui-icon-survey"></i>
+                                    重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -67,12 +88,14 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">内容主体区域</div>
+            <iframe src="/page/dashboard.html" name="fm" frameborder="0">
+
+            </iframe>
         </div>
 
-        <div class="layui-footer">
+        <div class="layui-footer" style="background-color: #d2d2d2;">
             <!-- 底部固定区域 -->
-            © layui.com - 底部固定区域
+            © http:www.yltedu.com - 源码空间
         </div>
     </div>
     <script src="./assets/layui/layui.all.js"></script>

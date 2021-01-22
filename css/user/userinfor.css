@@ -1,0 +1,13 @@
+body.layui-bg-gray{
+    padding: 20px;
+}
+.layui-tab-content{
+    background-color: #ffffff;
+}
+.layui-form{
+    width: 30%;
+}
+
+.layui-tab-content .layui-table{
+    width: 30%;
+}
