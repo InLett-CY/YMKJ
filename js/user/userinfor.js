@@ -61,7 +61,6 @@ $(function () {
                 });
                 getuserInfor();
                 window.parent.getUserinfor();
-                console.log(window.parent);
             }
         });
     });
