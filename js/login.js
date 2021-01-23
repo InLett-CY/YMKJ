@@ -75,6 +75,9 @@ $(function () {
                     content: '登录成功！',
                     time: 2000
                 });
+                // 因为SessionStorage声明周期为当前站点通信期间，只要当前浏览器的访问域名没有发生改变，则SessionStorage一直存在(例如页面的刷新，同一个域名内页面的跳转)
+                // 如果因为人为关闭当前浏览器的标签页断开与域名的通信过程，或者直接关闭浏览器则sessionStorage直接被自动清理
+                sessionStorage.setItem("refresh", true);
                 localStorage.setItem("token", res.token);
                 location.href = "./../index.html";
             }

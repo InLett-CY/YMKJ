@@ -1,4 +1,4 @@
-$(function () {
+function getUserinfor() {
     $.ajax({
         type: "GET",
         url: "/my/myinfor",
@@ -22,18 +22,23 @@ $(function () {
             }
         }
     });
-
+}
+$(function () {
+    getUserinfor();
     $("#exit_link").on("click", function () {
-        layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, function (index) {
+        layer.confirm('确定退出登录?', {
+            icon: 3,
+            title: '提示'
+        }, function (index) {
             if (localStorage.getItem("token")) {
                 localStorage.removeItem("token");
             }
             location.href = "./../login.html";
             layer.close(index);
-          });
-        
+        });
     });
 });
+
 
 function renderAvatar(user) {
     // 1.先获取用户名称或昵称，原则是优先获取昵称
@@ -41,7 +46,7 @@ function renderAvatar(user) {
     // 2.设置问候语
     $("#welcome").html(`欢迎&nbsp;&nbsp;${nick}`);
     // 3.按需求进行用户头像的渲染
-    if (user.upicimage!==null) {
+    if (user.upicimage !== null) {
         $(".layui-nav-img").attr("src", user.upicimage).show();
         $(".text-avatar").hide();
     } else {
