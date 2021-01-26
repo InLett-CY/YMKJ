@@ -1,4 +1,15 @@
 $(function () {
+    if (!localStorage.getItem("token")) {
+        return layer.open({
+            title: '提示',
+            icon: 2,
+            content: "用户登录信息无效，请重新登录！",
+            time: 2000,
+            end: function () {
+                location.href = "./../../login.html";
+            }
+        });
+    }
     //图像上传
     $("#chooseImg").on("change", function (e) {
         var file = $(this)[0];
