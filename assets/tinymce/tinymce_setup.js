@@ -1,13 +1,13 @@
 function initEditor() {
   tinymce.init({
     //选择class为content的标签作为编辑器
-    selector: '#textarea',
+    selector: 'textarea',
     //方向从左到右
     directionality: 'ltr',
     //语言选择中文
     language: 'zh_CN',
     //高度为400
-    height: 600,
+    height: 500,
     statusbar: false,
     width: '100%',
     //工具栏上面的补丁按钮
@@ -34,5 +34,5 @@ function initEditor() {
     //按tab不换行
     nonbreaking_force_tab: true
     //   imageupload_url: '/user/submit-image'
-  });
+  })
 }

@@ -1,0 +1,10 @@
+body{
+    padding: 20px;
+}
+.layui-table,.pagediv{
+    width: 60%;
+    text-align: center;
+}
+#pageBox{
+    display: inline-block;
+}

@@ -165,6 +165,7 @@ function publishArt(data) {
                 content: "文章发布/保存成功！"
             });
             $("#btn-reset").click();
+            location.href = "./../../page/article/article-list.html";
         }
     });
 }
